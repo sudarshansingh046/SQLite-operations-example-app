@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text1"
+        android:text="CRUD Example"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter id to update or delete"
+        android:id="@+id/id"
+        android:textSize="20dp"
+        android:layout_marginTop="70dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name to insert or update"
+        android:id="@+id/name"
+        android:textSize="20dp"
+        android:layout_below="@+id/id"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:id="@+id/layout1"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/insert"
+            android:text="Insert"
+            android:textSize="20dp"
+            android:onClick="buttonAction"
+            android:backgroundTint="@android:color/holo_orange_light"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view"
+            android:text="View"
+            android:textSize="20dp"
+            android:onClick="buttonAction"
+            android:layout_below="@+id/name"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:onClick="buttonAction"
+            android:id="@+id/update"
+            android:textSize="20dp"
+            android:layout_below="@+id/name"
+            android:backgroundTint="@android:color/holo_green_light"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="20dp"
+            android:onClick="buttonAction"
+            android:id="@+id/delete"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:layout_marginTop="40dp"
+        android:id="@+id/text"
+        android:text="display"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+</RelativeLayout>
